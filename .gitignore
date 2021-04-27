@@ -2,7 +2,8 @@
 /node_modules
 node_modules
 .cache
-
+deploy.sh
+vue.config.js
 # Editor directories and files
 .idea
 .vscode

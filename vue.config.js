@@ -2,6 +2,6 @@
 
 module.exports = {
     publicPath: process.env.NODE_ENV === 'production'
-      ? '/white-stapler/public'
+      ? '/white-stapler/dist'
       : '/'
   }
