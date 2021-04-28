@@ -5,11 +5,9 @@
     </a>
     <transition name="open" appear>
         <div class="sub-menu" v-if="isOpen">
-            <div class="menu-item">
-                <router-link to="/projects/organic_fractals">Organic Fractals</router-link>
-            </div>
-            <div class="menu-item"><router-link to="/projects/shaders">Shaders and More</router-link></div>
-            <div class="menu-item"><router-link to="/projects/bird_sketch">Bird Sound Sketches</router-link></div>
+            <div class="menu-item"><router-link to="/projects/organic_fractals" tag="button">Organic Fractals</router-link></div>
+            <div class="menu-item"><router-link to="/projects/shaders" tag="button">Shaders and More</router-link></div>
+            <div class="menu-item"><router-link to="/projects/bird_sketch" tag="button">Bird Sounds</router-link></div>
         </div>
     </transition>
   </div>
