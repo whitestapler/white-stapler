@@ -1,0 +1,43 @@
+<template>
+  <div class="menu-item" @click="isOpen =!isOpen">>
+    <a href="#">
+        {{title}}
+    </a>
+    <transition name="open" appear>
+        <div class="sub-menu" v-if="isOpen">
+            <div class="menu-item">
+                <router-link to="/projects/organic_fractals">Organic Fractals</router-link>
+            </div>
+            <div class="menu-item"><router-link to="/projects/shaders">Shaders and More</router-link></div>
+            <div class="menu-item"><router-link to="/projects/bird_sketch">Bird Sound Sketches</router-link></div>
+        </div>
+    </transition>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'dropdown',
+  data () {
+      return {
+          isOpen: false
+      }
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+
+nav .menu-item .sub-menu {
+    position: absolute;
+    top: calc(100% + 18px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    border-radius: 0px 0px 16px;
+    text-align: center;
+
+}
+
+</style>

@@ -1,8 +1,9 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Home from "../components/Home.vue";
-import Lore from "../components/Lore.vue";
-import Projects from "../components/Projects.vue";
 import Error from "../components/404.vue";
+import Organic_Fractals from "../components/Projects/Organic_Fractals.vue"
+import Shaders from "../components/Projects/Shaders.vue"
+import Bird_Sketch from "../components/Projects/Bird_Sketch.vue"
 
 const routes = [
   {
@@ -11,14 +12,19 @@ const routes = [
     component: Home,
   },
   {
-    path: "/lore",
-    name: "Lore",
-    component: Lore,
+    path: "/projects/organic_fractals",
+    name: "Organic_Fractals",
+    component: Organic_Fractals,
   },
   {
-    path: "/projects",
-    name: "Projects",
-    component: Projects,
+    path: "/projects/shaders",
+    name: "Shaders",
+    component: Shaders,
+  },
+  {
+    path: "/projects/bird_sketch",
+    name: "Bird_Sketch",
+    component: Bird_Sketch,
   },
   {
     path: '/:catchAll(.*)',

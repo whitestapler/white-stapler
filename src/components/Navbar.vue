@@ -2,29 +2,31 @@
     <nav>
         <div class="home"><router-link to="/">Home</router-link></div>
         <div class="nav-right">
-            <div class="menu-item"><router-link to="/lore">Lore</router-link></div>
-            <div class="menu-item"><router-link to="/projects">All Projects</router-link></div>
+            <Dropdown title="-" />
         </div>
     </nav>
 </template>
 
 <script>
+import Dropdown from './Project_Dropdown';
 
 export default {
-    name: 'navbar'
+    name: 'navbar',
+    components: {
+        Dropdown
+}
 }
 </script>
 
 <style>
 nav {
     display: flex;
-    overflow: hidden;
     justify-content: space-around;
 }
 
 nav .home {
     color: white;
-    padding: 10px 20px;
+    padding: 20px 20px;
     position: relative;
     text-align: right;
     border-bottom: 3px solid transparent;
@@ -40,13 +42,12 @@ nav .home a {
 
 nav .menu-item {
     color: white;
-    padding: 10px 20px;
+    padding: 20px 20px;
     position: relative;
     text-align: center;
-    border-bottom: 3px solid transparent;
     display: flex;
+    border-bottom: 2px solid transparent;
     transition: 0.4s;
-    float: left;
 }
 
 nav .menu-item a {
@@ -54,8 +55,9 @@ nav .menu-item a {
     text-decoration: none;
 }
 
-nav .nav-right {
-    float: right;
-    text-align: right;
+nav .menu-item.active,
+nav .menu-item:hover {
+    background-color: grey;
 }
+
 </style>
