@@ -1,0 +1,1 @@
+<button @click="$router.push('/projects/organic_fractals')">Organic Fractals</button>

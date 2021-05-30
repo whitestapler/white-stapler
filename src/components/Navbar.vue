@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <div class="home"><router-link to="/">Home</router-link></div>
+        <div class="home"><router-link to="/">White Stapler</router-link></div>
         <div class="nav-right">
             <Dropdown title="-" />
         </div>
@@ -21,7 +21,7 @@ export default {
 <style>
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 nav .home {

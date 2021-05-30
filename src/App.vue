@@ -31,6 +31,8 @@ export default {
   text-align: center;
   color:white;
   margin-top: 20px;
+  margin:0;
+  line-height: 0;
 
 }
 body{
